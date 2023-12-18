@@ -15,15 +15,15 @@ const counterSlice = createSlice({
       state.counter--;
     },
     increase(state, action) {
-      state.counter = state.counter + action.value;
+      state.counter = state.counter + action.payload;
     },
-    toggleCouter(state) {
+    toggle(state) {
       state.showCounter = !state.showCounter;
     },
   },
 });
 
-// We use createReducer to create a reducer fungiont without redux toolkit!
+// We use createReducer to create a reducer function without redux toolkit!
 // const counterReducer = (state = initialState, action) => {
 //   switch (action.type) {
 //     case 'increment':
