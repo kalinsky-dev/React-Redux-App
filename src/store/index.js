@@ -61,10 +61,12 @@ const authSlice = createSlice({
 
 // const store = createStore(counterReducer);
 
+// My Store uses multiple Store Slices!
 const store = configureStore({
   reducer: { counter: counterSlice.reducer, auth: authSlice.reducer },
 });
 
+// Exporting multiple action Objects!
 export const counterActions = counterSlice.actions;
 export const authActions = authSlice.actions;
 
